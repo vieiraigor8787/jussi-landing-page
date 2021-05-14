@@ -7,12 +7,14 @@ import Leads from './components/Leads';
 import About from './components/AboutJussi';
 import News from './components/News';
 import MainBanner from './components/Banner';
+import StoreSession from './components/Stores';
 
 function App() {
   return (
     <>
     <Header />
     <MainBanner />
+    <StoreSession />
     <About />
     <News />
     <Leads />
