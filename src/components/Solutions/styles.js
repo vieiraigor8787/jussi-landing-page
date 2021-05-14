@@ -19,64 +19,68 @@ export const TitleBlock = styled.h2`
   font-weight: bold;
   font-size: 32px;
   line-height: 40px;
-  margin-bottom: 25px;
-  &::before{
-    content: '//';
-    display: inline-block;
-    color: var(--color-green);
-    margin-right: 10px;
+  margin: 0 70px 25px;
+  span {
+      color: var(--color-green-jussi)
   }
 `
 export const ContentBlock = styled.div`
   display: flex;
   flex-wrap: wrap; 
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 0 3em;
   @media (max-width: 768px){
     width: 100%;
   }
 `
 export const CardsBlock = styled.div`
-  width: 23%;
-  border: 1px solid var(--color-grey);
+  width: 22%;
+  height: 381px;
+  border: 1px solid var(--color-grey-jussi);
   border-radius: 4px;
-  padding: 20px;
+  padding: 10px;
+  h3 {
+    margin: 10px;
+  }
   h4{
-    font-size: 16px;
-    margin: 10px 16px;
+    margin: 20px 10px;
+    color: var(--color-pink-jussi);
   }
   p{
     font-size: 12px;
-    margin: 10px 16px;
-    color: var(--color-pink);
+    color: var(--color-pink-jussi);
   }
   ul{
-    margin-left: 28px;
-    list-style: disc;
+    margin: 10px;
   }
   ul >li{
     font-size: 12px;
-    color: var(--color-dark-grey);
+    color: var(--color-dark-grey-jussi);
     margin: 3px 2px;
   }
   a{
+    text-decoration: none;
     display: block;
     width: 95%;
     height: 48px;
     text-align: center;
     text-decoration: none;
     color: var(--color-black);
-    background-color: var(--color-green);
+    background-color: var(--color-green-jussi);
     border-radius: 6px;
     margin: 20px auto;
     padding: 13px 0;
+  }
+  button {
+    border: none;
   }
   @media (max-width: 768px){
     width: 100%;
     margin-bottom: 10px;
   }
 `
-export const ID = styled.div`
-  background-color: var(--color-grey);
+export const CardsImg = styled.div`
+  background-color: var(--color-grey-jussi);
   width: 100px;
   height: 100px;
   border-radius: 50%;

@@ -3,36 +3,32 @@ import * as s from "./styles";
 
 const dataJSON = [
   {
-    image: "P1",
+    img: "P1",
     name: "Nome do Produto #1",
     description: "Descrição do produto #1",
     features: ["Feature 1", "Feature 2", "Feature 3"],
     link: "#",
-    id: Math.random(),
   },
   {
-    image: "P2",
+    img: "P2",
     name: "Nome do Produto #2",
     description: "Descrição do produto #2",
     features: ["Feature 1", "Feature 2", "Feature 3"],
     link: "#",
-    id: Math.random(),
   },
   {
-    image: "P3",
+    img: "P3",
     name: "Nome do Produto #3",
     description: "Descrição do produto #3",
     features: ["Feature 1", "Feature 2", "Feature 3"],
     link: "#",
-    id: Math.random(),
   },
   {
-    image: "P4",
+    img: "P4",
     name: "Nome do Produto #4",
     description: "Descrição do produto #4",
     features: ["Feature 1", "Feature 2", "Feature 3"],
     link: "#",
-    id: Math.random(),
   },
 ];
 
@@ -42,28 +38,28 @@ const Solutions = () => {
       <s.Block>
         <s.TitleBlock>
           <h2>
-            <span>//</span>NOSSAS SOLUÇÕES
+            <span>//&nbsp;</span>NOSSAS SOLUÇÕES
           </h2>
         </s.TitleBlock>
         <s.ContentBlock>
           {dataJSON &&
             dataJSON.length > 0 &&
-            dataJSON.map((solution) => (
-              <s.CardsBlock key={solution.id}>
-                <div className="solution-image">
-                  <span>{solution.image}</span>
-                </div>
-                <h3>{solution.name}</h3>
-                <h4>{solution.description}</h4>
+            dataJSON.map((data) => (
+              <s.CardsBlock key={data.id}>
+                <s.CardsImg>
+                  <span>{data.img}</span>
+                </s.CardsImg>
+                <h3>{data.name}</h3>
+                <h4>{data.description}</h4>
                 <ul>
-                  {solution.features &&
-                    solution.features.length > 0 &&
-                    solution.features.map((item) => (
-                      <li key={item}>{`🞄 ${item}`}</li>
+                  {data.features &&
+                    data.features.length > 0 &&
+                    data.features.map((feature) => (
+                      <li key={feature}>{`🞄 ${feature}`}</li>
                     ))}
                 </ul>
-                <a href={solution.urlPath} target="_blank" rel="noreferrer">
-                  <button>Ver Solução</button>
+                <a href={data.link} target="_blank" rel="noreferrer">
+                 Ver Solução
                 </a>
               </s.CardsBlock>
             ))}

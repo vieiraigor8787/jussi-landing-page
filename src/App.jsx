@@ -8,6 +8,7 @@ import About from './components/AboutJussi';
 import News from './components/News';
 import MainBanner from './components/Banner';
 import StoreSession from './components/Stores';
+import Solutions from './components/Solutions';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     <Header />
     <MainBanner />
     <StoreSession />
+    <Solutions />
     <About />
     <News />
     <Leads />
