@@ -5,7 +5,7 @@ import JussyAgency from "../../img/image-jussi.png";
 
 const About = () => {
   return (
-    <s.Content id="Quem-somos">
+    <s.Content id="SobreNos">
       <s.Block>
         <s.Text>
           <h2>Olá, somos A Jüssi</h2>

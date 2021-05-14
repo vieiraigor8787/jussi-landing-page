@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as s from "./styles";
+import { Link } from 'react-scroll';
 
 import logo from "../../img/logoJussi.svg";
 import search from "../../assets/icon/search.svg";
@@ -34,11 +35,11 @@ const Header = () => {
             <img src={logo} alt="logo Jussi" />
           </s.Logo>
           <s.Menu>
-            <a href="#NossasSolucoes">
-              <p>Nossas soluções</p>
+            <a href="">
+              <p><Link to='NossasSolucoes' spy={true} smooth={true}>Nossas soluções</Link></p>
             </a>
-            <a href="#SobreNos">
-              <p>Conheça a Jussi</p>
+            <a href="">
+              <p><Link to='SobreNos' spy={true} smooth={true}>Conheça a Jussi</Link></p>
             </a>
           </s.Menu>
         </s.AlignLeft>

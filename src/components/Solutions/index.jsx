@@ -34,7 +34,7 @@ const dataJSON = [
 
 const Solutions = () => {
   return (
-    <s.Content>
+    <s.Content id="NossasSolucoes">
       <s.Block>
         <s.TitleBlock>
           <h2>
