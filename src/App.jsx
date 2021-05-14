@@ -6,11 +6,13 @@ import Footer from './components/Footer';
 import Leads from './components/Leads';
 import About from './components/AboutJussi';
 import News from './components/News';
+import MainBanner from './components/Banner';
 
 function App() {
   return (
     <>
     <Header />
+    <MainBanner />
     <About />
     <News />
     <Leads />
