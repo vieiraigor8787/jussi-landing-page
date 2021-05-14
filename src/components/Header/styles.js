@@ -23,6 +23,9 @@ export const Menu = styled.nav`
     display: flex;
     justify-content: space-between;
     width: 50%;
+    p:hover{
+      color: var(--color-pink-jussi)
+    }
   a {
       color: var(--color-black-jussi);
   }
@@ -48,6 +51,9 @@ export const AlignRight = styled.div`
   flex-wrap: wrap;
   align-items: center;
   width: 30%;
+  a:hover{
+    color: var(--color-pink-jussi)
+  }
   @media (max-width: 768px) {
     width: 100%;
     justify-content: flex-end;
