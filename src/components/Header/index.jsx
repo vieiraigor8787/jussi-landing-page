@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import * as s from "./styles";
 
 import logo from "../../img/logoJussi.svg";
 import search from "../../assets/icon/search.svg"
 import cart from "../../assets/icon/shopping-cart.svg"
 
+import apiService from '../../apiservice';
+
 const Header = () => {
+  const [loading, setLoading] = useState(false)
+  const [inputValue, setInputValue] = useState('')
+
+  const searchBtn = async () => {
+    setLoading(true)
+    try{
+      const { data } = await apiService.get(`/${inputValue}`)
+      setLoading(false)
+      console.log(data)
+      alert('olá');
+      setInputValue('')
+    } catch(e){
+      setLoading(false)
+      setInputValue('')
+      alert('usuário não encontrado')
+    }
+  }
+
   return (
     <s.Header>
       <s.BarraTopo>
@@ -26,13 +46,17 @@ const Header = () => {
           <s.SearchBar>
             <form>
               <input
-                type="search"
+                type="text"
                 name="search"
                 id="search"
                 placeholder="Buscar"
+                value={loading ? '' : inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
               />
-              <button type="submit">
-                  <img src={search} alt="procurar"/>
+              <button 
+              type="submit"
+              onClick={inputValue ? searchBtn : () => alert('sd')}>
+                  <img src={search} alt="buscar" />
               </button>
             </form>
           </s.SearchBar>
