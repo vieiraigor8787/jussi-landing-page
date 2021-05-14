@@ -4,12 +4,14 @@ import GlobalStyle from './style/globalStyle';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Leads from './components/Leads';
+import About from './components/AboutJussi';
 import News from './components/News';
 
 function App() {
   return (
     <>
     <Header />
+    <About />
     <News />
     <Leads />
     <Footer />

@@ -1,26 +1,29 @@
 import styled from 'styled-components';
 
 export const Content = styled.section`
-  background-color: var(--color-pink-jussi);
+  background: var(--color-pink-jussi);
 `
 export const Block = styled.div`
   max-width: 1440px;
-  margin: auto;
-  padding: 120px;
+  margin: 0 auto;
+  padding: 5%;
   text-align: center;
   color: var(--color-white-jussi);
   
   @media (max-width: 768px){
-    padding: 30px 20px;
+    padding: 20px;
   }
 `
 export const Text = styled.div`
-  width: 65%;
+  width: 55%;
   margin: 0 auto;
 h2{
+    font-size: 32px;
     text-transform: uppercase;
     margin: 20px 0 40px;
-    font-size: 32px;
+  }
+  p{
+      
   }
 h3{
   font-size: 32px;
@@ -28,8 +31,8 @@ h3{
 }
 @media (max-width: 768px){
   width: 100%;
-  h2{
-    font-size: 25px;
+  h2, h3{
+      font-size: 22px;
   }
 }
 `
